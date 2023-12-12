@@ -15,10 +15,14 @@ body {
   color: #fff;
 }
 
-.wrapper {
+.wrapper, h1 {
   max-width: 115rem;
   width: 100%;
   margin: 0 auto;
+}
+
+h1 {
+  margin: 20px auto;
 }
 
 .wrap {
@@ -70,7 +74,7 @@ audio {
   padding: 2.5rem 3.5rem;
   background-color: #1C1C1C;
   border-radius: 0.4rem;
-  margin: 1.2rem;
+  margin-right: 1.2rem;
 }
 
 .containerElement {
@@ -127,6 +131,10 @@ audio {
 }
 .infoElement img {
   margin: 0 10px 0 0;
+}
+
+.smallText {
+  color: #464646;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,13 +8,13 @@ renderApp()
 
 function renderApp() {
     const rootElement = document.querySelector('#root')
-
     const playList = getState()
-
+    const myPlaylistsElement = document.createElement('h1')
+    myPlaylistsElement.innerText = 'My Playlists'
     const bodyCont = document.createElement('div')
     bodyCont.classList.add('wrapper')
     bodyCont.style.display = 'flex'
     bodyCont.append(renderPlaylist(playList[0]), renderPlaylist(playList[1]))
-    rootElement.append(renderHeader(), bodyCont)
+    rootElement.append(renderHeader(), myPlaylistsElement,bodyCont)
 }
 

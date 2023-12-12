@@ -32,12 +32,13 @@ function renderPlaylistTitle(playlist) {
     lengthTrack.style.margin = '13px 0'
     lengthTrack.innerText = `${playlist.tracks.length} tracks, ${Math.floor(playlist.info.totalTracksDurationInSeconds/60)}m ${playlist.info.totalTracksDurationInSeconds%60}s`
     playlistTitleElement.innerText = playlist.title;
-    wrapper.append(playlistTitleElement, lengthTrack)
+    //append
+    const aristNames = document.createElement('div')
+    wrapper.append(playlistTitleElement, lengthTrack, aristNames)
     for (let i = 0; i < 3; i++) {
-        const span = document.createElement('span')
-        span.innerText = ` ${playlist.tracks[i].artistName} /`
-        wrapper.append(span)
+        i === 2 ? aristNames.innerText += ` ${playlist.tracks[i].artistName} and others` : aristNames.innerText += ` ${playlist.tracks[i].artistName},`
     }
+
     return wrapper
 }
 function renderPlaylistImageCover(playlist) {
